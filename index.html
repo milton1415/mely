@@ -1,142 +1,616 @@
-<!DOCTYPE HTML>
-<!--
-	Astral by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
-<html>
-	<head>
-		<title>Astral by HTML5 UP</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
-	</head>
-	<body class="is-preload">
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nuestro Repositorio de Amor ❤️</title>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <style>
+        :root {
+            --pink-pastel: #ffe4ec;
+            --white: #ffffff;
+            --deep-pink: #ff69b4;
+            --soft-gray: #f8f9fa;
+            --text-color: #4a4a4a;
+        }
 
-		<!-- Wrapper-->
-			<div id="wrapper">
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-				<!-- Nav -->
-					<nav id="nav">
-						<a href="#" class="icon solid fa-home"><span>Home</span></a>
-						<a href="#work" class="icon solid fa-folder"><span>Work</span></a>
-						<a href="#contact" class="icon solid fa-envelope"><span>Contact</span></a>
-						<a href="https://twitter.com/ajlkn" class="icon brands fa-twitter"><span>Twitter</span></a>
-					</nav>
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background-color: var(--pink-pastel);
+            color: var(--text-color);
+            overflow-x: hidden;
+            scroll-behavior: smooth;
+        }
 
-				<!-- Main -->
-					<div id="main">
+        h1, h2, h3, .romantic-font {
+            font-family: 'Dancing Script', cursive;
+        }
 
-						<!-- Me -->
-							<article id="home" class="panel intro">
-								<header>
-									<h1>Jane Doe</h1>
-									<p>Senior Astral Projectionist</p>
-								</header>
-								<a href="#work" class="jumplink pic">
-									<span class="arrow icon solid fa-chevron-right"><span>See my work</span></span>
-									<img src="images/me.jpg" alt="" />
-								</a>
-							</article>
+        /* --- PANTALLA DE LOGIN --- */
+        #login-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, var(--pink-pastel) 0%, #fbc2eb 100%);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 10000;
+            transition: opacity 0.8s ease;
+        }
 
-						<!-- Work -->
-							<article id="work" class="panel">
-								<header>
-									<h2>Work</h2>
-								</header>
-								<p>
-									Phasellus enim sapien, blandit ullamcorper elementum eu, condimentum eu elit.
-									Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia
-									luctus elit eget interdum.
-								</p>
-								<section>
-									<div class="row">
-										<div class="col-4 col-6-medium col-12-small">
-											<a href="#" class="image fit"><img src="images/pic01.jpg" alt=""></a>
-										</div>
-										<div class="col-4 col-6-medium col-12-small">
-											<a href="#" class="image fit"><img src="images/pic02.jpg" alt=""></a>
-										</div>
-										<div class="col-4 col-6-medium col-12-small">
-											<a href="#" class="image fit"><img src="images/pic03.jpg" alt=""></a>
-										</div>
-										<div class="col-4 col-6-medium col-12-small">
-											<a href="#" class="image fit"><img src="images/pic04.jpg" alt=""></a>
-										</div>
-										<div class="col-4 col-6-medium col-12-small">
-											<a href="#" class="image fit"><img src="images/pic05.jpg" alt=""></a>
-										</div>
-										<div class="col-4 col-6-medium col-12-small">
-											<a href="#" class="image fit"><img src="images/pic06.jpg" alt=""></a>
-										</div>
-										<div class="col-4 col-6-medium col-12-small">
-											<a href="#" class="image fit"><img src="images/pic07.jpg" alt=""></a>
-										</div>
-										<div class="col-4 col-6-medium col-12-small">
-											<a href="#" class="image fit"><img src="images/pic08.jpg" alt=""></a>
-										</div>
-										<div class="col-4 col-6-medium col-12-small">
-											<a href="#" class="image fit"><img src="images/pic09.jpg" alt=""></a>
-										</div>
-										<div class="col-4 col-6-medium col-12-small">
-											<a href="#" class="image fit"><img src="images/pic10.jpg" alt=""></a>
-										</div>
-										<div class="col-4 col-6-medium col-12-small">
-											<a href="#" class="image fit"><img src="images/pic11.jpg" alt=""></a>
-										</div>
-										<div class="col-4 col-6-medium col-12-small">
-											<a href="#" class="image fit"><img src="images/pic12.jpg" alt=""></a>
-										</div>
-									</div>
-								</section>
-							</article>
+        .login-card {
+            background: white;
+            padding: 2.5rem;
+            border-radius: 20px;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+            text-align: center;
+            max-width: 400px;
+            width: 90%;
+        }
 
-						<!-- Contact -->
-							<article id="contact" class="panel">
-								<header>
-									<h2>Contact Me</h2>
-								</header>
-								<form action="#" method="post">
-									<div>
-										<div class="row">
-											<div class="col-6 col-12-medium">
-												<input type="text" name="name" placeholder="Name" />
-											</div>
-											<div class="col-6 col-12-medium">
-												<input type="text" name="email" placeholder="Email" />
-											</div>
-											<div class="col-12">
-												<input type="text" name="subject" placeholder="Subject" />
-											</div>
-											<div class="col-12">
-												<textarea name="message" placeholder="Message" rows="6"></textarea>
-											</div>
-											<div class="col-12">
-												<input type="submit" value="Send Message" />
-											</div>
-										</div>
-									</div>
-								</form>
-							</article>
+        .login-card h2 {
+            color: var(--deep-pink);
+            margin-bottom: 1rem;
+            font-size: 2rem;
+        }
 
-					</div>
+        .login-card input {
+            width: 100%;
+            padding: 12px;
+            margin: 15px 0;
+            border: 2px solid var(--pink-pastel);
+            border-radius: 25px;
+            text-align: center;
+            outline: none;
+            font-size: 1rem;
+        }
 
-				<!-- Footer -->
-					<div id="footer">
-						<ul class="copyright">
-							<li>&copy; Untitled.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
-						</ul>
-					</div>
+        .login-card button {
+            background: var(--deep-pink);
+            color: white;
+            border: none;
+            padding: 12px 30px;
+            border-radius: 25px;
+            cursor: pointer;
+            font-weight: bold;
+            transition: transform 0.3s;
+        }
 
-			</div>
+        .login-card button:hover {
+            transform: scale(1.05);
+        }
 
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
+        /* --- CONTENIDO PRINCIPAL (Oculto al inicio) --- */
+        #main-content {
+            display: none;
+            opacity: 0;
+            transition: opacity 1s ease;
+        }
 
-	</body>
+        /* --- NAVEGACIÓN ESTILO ASTRAL --- */
+        nav {
+            position: fixed;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(10px);
+            padding: 10px 20px;
+            border-radius: 40px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            z-index: 1000;
+            display: flex;
+            gap: 20px;
+        }
+
+        nav a {
+            color: var(--deep-pink);
+            font-size: 1.2rem;
+            text-decoration: none;
+            transition: 0.3s;
+        }
+
+        nav a:hover {
+            transform: translateY(-5px);
+        }
+
+        /* --- SECCIONES --- */
+        section {
+            min-height: 100vh;
+            padding: 80px 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s ease-out;
+        }
+
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* --- INTRO --- */
+        #intro {
+            text-align: center;
+        }
+
+        #intro h1 {
+            font-size: 3.5rem;
+            color: var(--deep-pink);
+            margin-bottom: 20px;
+        }
+
+        .music-control {
+            margin-top: 20px;
+            background: white;
+            border: 1px solid var(--deep-pink);
+            padding: 10px 20px;
+            border-radius: 20px;
+            cursor: pointer;
+        }
+
+        /* --- TIMELINE --- */
+        .timeline {
+            position: relative;
+            max-width: 800px;
+            width: 100%;
+            margin-top: 40px;
+        }
+
+        .timeline::after {
+            content: '';
+            position: absolute;
+            width: 2px;
+            background: var(--deep-pink);
+            top: 0; bottom: 0; left: 50%;
+            margin-left: -1px;
+        }
+
+        .container-tl {
+            padding: 10px 40px;
+            position: relative;
+            background: inherit;
+            width: 50%;
+        }
+
+        .container-tl::after {
+            content: '❤️';
+            position: absolute;
+            width: 25px; height: 25px;
+            right: -17px; background-color: white;
+            top: 15px; border-radius: 50%; z-index: 1;
+            display: flex; align-items: center; justify-content: center;
+            font-size: 12px;
+        }
+
+        .left { left: 0; }
+        .right { left: 50%; }
+        .right::after { left: -12px; }
+
+        .content-tl {
+            padding: 20px;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+        }
+
+        .content-tl h3 { color: var(--deep-pink); margin-bottom: 5px; }
+
+        /* --- GALERÍA --- */
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            width: 100%;
+        }
+
+        .photo-frame {
+            background: white;
+            padding: 10px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            transition: 0.3s;
+            cursor: pointer;
+        }
+
+        .photo-frame img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 5px;
+        }
+
+        .photo-frame:hover {
+            transform: scale(1.03) rotate(2deg);
+        }
+
+        /* --- CARTAS --- */
+        .letter-box {
+            background: #fff;
+            border: 2px dashed var(--deep-pink);
+            padding: 30px;
+            margin: 20px;
+            border-radius: 10px;
+            cursor: pointer;
+            position: relative;
+            transition: 0.5s;
+        }
+
+        .letter-content {
+            display: none;
+            margin-top: 20px;
+            font-style: italic;
+            line-height: 1.6;
+        }
+
+        /* --- CORAZONES FLOTANTES --- */
+        .heart {
+            position: fixed;
+            color: var(--deep-pink);
+            font-size: 1.5rem;
+            pointer-events: none;
+            z-index: -1;
+            animation: float 6s linear infinite;
+            opacity: 0.5;
+        }
+
+        @keyframes float {
+            0% { transform: translateY(100vh) rotate(0deg); opacity: 1; }
+            100% { transform: translateY(-10vh) rotate(360deg); opacity: 0; }
+        }
+
+        /* --- VIDEO / AUDIO CUSTOM --- */
+        .media-placeholder {
+            width: 100%;
+            max-width: 600px;
+            background: #000;
+            aspect-ratio: 16/9;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            border-radius: 15px;
+            margin: 20px 0;
+        }
+
+        /* --- RESPONSIVE --- */
+        @media screen and (max-width: 600px) {
+            .timeline::after { left: 31px; }
+            .container-tl { width: 100%; padding-left: 70px; padding-right: 25px; }
+            .container-tl::after { left: 18px; }
+            .right { left: 0%; }
+            #intro h1 { font-size: 2.2rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <div id="hearts-container"></div>
+
+    <div id="login-overlay">
+        <div class="login-card">
+            <h2>Hola, mi amor ❤️</h2>
+            <p>Este lugar es solo para nosotros...</p>
+            <input type="password" id="password" placeholder="Ingresa nuestra clave...">
+            <br>
+            <button onclick="checkPassword()">Entrar al paraíso</button>
+            <p id="error-msg" style="color: red; display: none; margin-top: 10px;">Esa no es la clave, inténtalo de nuevo.</p>
+        </div>
+    </div>
+
+    <nav id="nav-bar">
+        <a href="#intro" title="Inicio"><i class="fas fa-home"></i></a>
+        <a href="#historia" title="Historia"><i class="fas fa-book-heart"></i></a>
+        <a href="#timeline" title="Línea de Tiempo"><i class="fas fa-hourglass-half"></i></a>
+        <a href="#galeria" title="Fotos"><i class="fas fa-camera-retro"></i></a>
+        <a href="#cartas" title="Cartas"><i class="fas fa-envelope-open-text"></i></a>
+        <a href="#especial" title="Especial"><i class="fas fa-star"></i></a>
+    </nav>
+
+    <div id="main-content">
+        
+        <section id="intro">
+            <h1 class="reveal">Bienvenida al lugar donde guardo todo lo que siento por ti...</h1>
+            <p class="reveal">Aquí el tiempo se detiene para recordarnos lo que somos.</p>
+            <button class="music-control" onclick="toggleMusic()">
+                <i class="fas fa-music"></i> <span id="music-text">Activar Música Suave</span>
+            </button>
+            <audio id="bg-music" loop>
+                <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mpeg">
+            </audio>
+        </section>
+
+        <section id="historia">
+            <h2 class="reveal" style="font-size: 3rem; color: var(--deep-pink);">📖 Cómo empezó todo</h2>
+            <div class="reveal" style="text-align: center; max-width: 700px; margin-top: 30px;">
+                <p>Nuestra historia no se escribió con tinta, se escribió con momentos...</p>
+                <div style="margin-top: 20px;">
+                    <h3>✨ Primer Encuentro</h3>
+                    <p>03 de Abril 2024, 7:23 pm. Ese momento donde el mundo cambió de color.</p>
+                    <br>
+                    <h3>✨ Segundo Encuentro</h3>
+                    <p>06 de Mayo 2024, 5:40 pm. La confirmación de que no eras una casualidad.</p>
+                    <br>
+                    <h3>✨ El Primer Contacto</h3>
+                    <p>Cuando nuestras manos se rozaron por primera vez, sentí un universo entero.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="timeline">
+            <h2 class="reveal" style="font-size: 3rem; color: var(--deep-pink);">⏳ Nuestra Línea de Tiempo</h2>
+            <div class="timeline">
+                <div class="container-tl left reveal">
+                    <div class="content-tl">
+                        <h3>03/04/2024 (19:23)</h3>
+                        <p>Nos conocimos. El inicio de todo.</p>
+                    </div>
+                </div>
+                <div class="container-tl right reveal">
+                    <div class="content-tl">
+                        <h3>06/05/2024 (17:40)</h3>
+                        <p>Nos vimos de nuevo. Mi corazón ya te reconocía.</p>
+                    </div>
+                </div>
+                <div class="container-tl left reveal">
+                    <div class="content-tl">
+                        <h3>29/05/2024</h3>
+                        <p>Casi beso. La tensión más dulce del mundo.</p>
+                    </div>
+                </div>
+                <div class="container-tl right reveal">
+                    <div class="content-tl">
+                        <h3>31/05/2024</h3>
+                        <p>Primer beso. Se detuvo el reloj.</p>
+                    </div>
+                </div>
+                <div class="container-tl left reveal">
+                    <div class="content-tl">
+                        <h3>10/06/2024</h3>
+                        <p>Empezamos como novios. Te elegí oficialmente.</p>
+                    </div>
+                </div>
+                <div class="container-tl right reveal">
+                    <div class="content-tl">
+                        <h3>14/02/2025</h3>
+                        <p>Nuestra primera vez. Unión de almas.</p>
+                    </div>
+                </div>
+                <div class="container-tl left reveal">
+                    <div class="content-tl">
+                        <h3>Viaje a São Paulo</h3>
+                        <p>Aventuras juntos en tierras brasileñas.</p>
+                    </div>
+                </div>
+                <div class="container-tl right reveal">
+                    <div class="content-tl">
+                        <h3>Julio 2025</h3>
+                        <p>Reencuentro esperado.</p>
+                    </div>
+                </div>
+                <div class="container-tl left reveal">
+                    <div class="content-tl">
+                        <h3>30/07/2025</h3>
+                        <p>Nos casamos. Sr. y Sra. ❤️</p>
+                    </div>
+                </div>
+                <div class="container-tl right reveal">
+                    <div class="content-tl">
+                        <h3>Meses viviendo juntos</h3>
+                        <p>Construyendo nuestro hogar día a día.</p>
+                    </div>
+                </div>
+                <div class="container-tl left reveal">
+                    <div class="content-tl">
+                        <h3>09/03 (16:00)</h3>
+                        <p>Despedida. Un "hasta luego" difícil.</p>
+                    </div>
+                </div>
+                <div class="container-tl right reveal">
+                    <div class="content-tl">
+                        <h3>Presente</h3>
+                        <p>Amor a distancia. Kilómetros que no pueden con nosotros.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="galeria">
+            <h2 class="reveal" style="font-size: 3rem; color: var(--deep-pink); margin-bottom: 30px;">📸 Galería de Recuerdos</h2>
+            <div class="gallery-grid">
+                <div class="photo-frame reveal"><img src="https://via.placeholder.com/400x400?text=Foto+Juntos+1" alt="Recuerdo"></div>
+                <div class="photo-frame reveal"><img src="https://via.placeholder.com/400x400?text=Foto+Juntos+2" alt="Recuerdo"></div>
+                <div class="photo-frame reveal"><img src="https://via.placeholder.com/400x400?text=Foto+Juntos+3" alt="Recuerdo"></div>
+                <div class="photo-frame reveal"><img src="https://via.placeholder.com/400x400?text=Foto+Juntos+4" alt="Recuerdo"></div>
+                <div class="photo-frame reveal"><img src="https://via.placeholder.com/400x400?text=Foto+Juntos+5" alt="Recuerdo"></div>
+                <div class="photo-frame reveal"><img src="https://via.placeholder.com/400x400?text=Foto+Juntos+6" alt="Recuerdo"></div>
+            </div>
+        </section>
+
+        <section id="cartas">
+            <h2 class="reveal" style="font-size: 3rem; color: var(--deep-pink);">💌 Cartas y Poemas</h2>
+            <div class="reveal" style="width: 100%;">
+                <div class="letter-box" onclick="toggleLetter(this)">
+                    <i class="fas fa-envelope"></i> <strong>Carta 1: Para cuando me extrañes...</strong>
+                    <div class="letter-content">
+                        "Mi amor, aunque los kilómetros nos separen hoy, mi mente no deja de recorrer tu sonrisa. Eres mi hogar, sin importar donde estés..."
+                    </div>
+                </div>
+                <div class="letter-box" onclick="toggleLetter(this)">
+                    <i class="fas fa-envelope"></i> <strong>Poema: La luz en mis ojos</strong>
+                    <div class="letter-content">
+                        "Ni el sol brilla tanto como tu mirada al despertar,<br>ni el mar es tan profundo como lo que te llego a amar."
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="especial">
+            <h2 class="reveal" style="font-size: 3rem; color: var(--deep-pink);">🌟 Nuestro Mundo</h2>
+            
+            <div class="gallery-grid" style="margin-top: 30px;">
+                <div class="content-tl reveal">
+                    <h3>🎬 Películas Favoritas</h3>
+                    <ul>
+                        <li>Nuestra peli #1</li>
+                        <li>Aquella que nos hizo llorar</li>
+                        <li>La que vimos mil veces</li>
+                    </ul>
+                </div>
+                <div class="content-tl reveal">
+                    <h3>📍 Lugares que Amamos</h3>
+                    <ul>
+                        <li>Donde fue la primera cita</li>
+                        <li>Nuestra cafetería secreta</li>
+                        <li>El rincón de São Paulo</li>
+                    </ul>
+                </div>
+                <div class="content-tl reveal">
+                    <h3>☁️ Sueños a Futuro</h3>
+                    <p>Nuestra casa propia, viajar por el mundo y envejecer tomados de la mano.</p>
+                </div>
+                <div class="content-tl reveal">
+                    <h3>👶 Nuestra Futura Zara</h3>
+                    <p>La niña que llevará tu sonrisa y mi corazón. Te esperamos, pequeñita.</p>
+                </div>
+            </div>
+
+            <div class="reveal" style="margin-top: 50px; text-align: center;">
+                <h3>🎧 Un mensaje para tus oídos</h3>
+                <p>"Si llegaste hasta aquí… escúchame"</p>
+                <audio controls style="margin-top: 15px;">
+                    <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-2.mp3" type="audio/mpeg">
+                </audio>
+            </div>
+
+            <div class="reveal" style="margin-top: 50px; text-align: center;">
+                <h3>📹 Tutorial: Para nunca pelear</h3>
+                <div class="media-placeholder">
+                    [Espacio para Video Tutorial]
+                </div>
+                <p>Recordatorio: La comunicación y un beso siempre ganan la batalla.</p>
+            </div>
+        </section>
+
+        <section id="recordatorio" style="background: white; border-radius: 50px 50px 0 0;">
+            <div class="reveal" style="text-align: center;">
+                <h2 style="font-size: 3rem; color: var(--deep-pink);">⚠️ Promesa de Amor</h2>
+                <p style="font-size: 1.2rem; margin: 20px 0;">Nunca abandonemos lo que tanto nos costó construir. Eres mi prioridad, hoy y siempre.</p>
+                <i class="fas fa-infinity" style="font-size: 3rem; color: var(--deep-pink);"></i>
+            </div>
+        </section>
+
+        <section id="final" style="min-height: 60vh;">
+            <h1 class="reveal" style="font-size: 4rem;">Algún día no habrá distancia… solo hogar.</h1>
+            <p class="reveal" style="font-size: 1.5rem; margin-top: 20px;">Firma: <strong>Siempre vuelvo a ti</strong></p>
+        </section>
+
+        <footer style="text-align: center; padding: 20px; color: var(--deep-pink);">
+            &copy; 2024 - Para mi esposa, Thayss ❤️
+        </footer>
+    </div>
+
+    <script>
+        // --- SEGURIDAD ---
+        function checkPassword() {
+            const pass = document.getElementById('password').value;
+            const error = document.getElementById('error-msg');
+            const overlay = document.getElementById('login-overlay');
+            const main = document.getElementById('main-content');
+
+            if(pass === "thayss2024") {
+                overlay.style.opacity = '0';
+                setTimeout(() => {
+                    overlay.style.display = 'none';
+                    main.style.display = 'block';
+                    setTimeout(() => { main.style.opacity = '1'; }, 100);
+                    createHearts(); // Iniciar corazones
+                }, 800);
+            } else {
+                error.style.display = 'block';
+                document.getElementById('password').value = "";
+            }
+        }
+
+        // --- MÚSICA ---
+        let musicPlaying = false;
+        const music = document.getElementById('bg-music');
+        function toggleMusic() {
+            if(!musicPlaying) {
+                music.play();
+                document.getElementById('music-text').innerText = "Música Sonando...";
+            } else {
+                music.pause();
+                document.getElementById('music-text').innerText = "Activar Música";
+            }
+            musicPlaying = !musicPlaying;
+        }
+
+        // --- CORAZONES FLOTANTES ---
+        function createHearts() {
+            const container = document.getElementById('hearts-container');
+            setInterval(() => {
+                const heart = document.createElement('div');
+                heart.classList.add('heart');
+                heart.innerHTML = '❤️';
+                heart.style.left = Math.random() * 100 + 'vw';
+                heart.style.animationDuration = (Math.random() * 3 + 3) + 's';
+                container.appendChild(heart);
+                
+                setTimeout(() => { heart.remove(); }, 6000);
+            }, 500);
+        }
+
+        // --- REVELAR AL HACER SCROLL ---
+        window.addEventListener('scroll', reveal);
+        function reveal() {
+            var reveals = document.querySelectorAll('.reveal');
+            for(var i = 0; i < reveals.length; i++){
+                var windowheight = window.innerHeight;
+                var revealtop = reveals[i].getBoundingClientRect().top;
+                var revealpoint = 150;
+                if(revealtop < windowheight - revealpoint){
+                    reveals[i].classList.add('active');
+                }
+            }
+        }
+
+        // --- ABRIR CARTAS ---
+        function toggleLetter(box) {
+            const content = box.querySelector('.letter-content');
+            if(content.style.display === "block") {
+                content.style.display = "none";
+                box.style.transform = "scale(1)";
+            } else {
+                content.style.display = "block";
+                box.style.transform = "scale(1.05)";
+                box.style.borderColor = "#ff69b4";
+            }
+        }
+
+        // Escuchar "Enter" en el login
+        document.getElementById('password').addEventListener('keypress', function (e) {
+            if (e.key === 'Enter') checkPassword();
+        });
+    </script>
+</body>
 </html>
